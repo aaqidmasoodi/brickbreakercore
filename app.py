@@ -187,8 +187,8 @@ while True:
 
 
 
-		if is_colliding_paddle():
-			ball.dy *= -1
+	if is_colliding_paddle():
+		ball.dy *= -1
 
 
 
