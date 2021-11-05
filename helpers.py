@@ -41,12 +41,20 @@ def create_paddle(shape='square', speed=0, color='brown', placement='horizontal'
 
 
 
-def create_brick():
-	brick = turtle.Turtle()
-	brick.shape('square')
-	brick.penup()
-	brick.speed(0)
-	brick.shapesize(stretch_len=4, stretch_wid=2)
+def create_brick(shape='square',speed=0, placement='horizontal'):
+    brick = turtle.Turtle()
+    brick.shape('square')
+    brick.penup()
+    brick.speed(0)
+    brick.shapesize(
 
-	return brick
+        stretch_len = 5 if placement == 'horizontal' else 2,
+        stretch_wid = 5 if placement == 'vertical' else 2
+
+    )
+    
+    brick.color('black','yellow')
+
+
+    return brick
 
